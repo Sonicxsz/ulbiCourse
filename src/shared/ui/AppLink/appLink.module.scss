@@ -1,0 +1,14 @@
+.wrapper {
+  font: var(--font-m);
+  text-decoration: none;
+}
+.wrapper:hover {
+  text-decoration: underline;
+}
+.light {
+  color: var(--inverted-primary-color);
+}
+
+.dark {
+  color: var(--inverted-primary-color);
+}

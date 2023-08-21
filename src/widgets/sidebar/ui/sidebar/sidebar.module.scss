@@ -1,0 +1,20 @@
+.wrapper {
+  height: calc(100vh - var(--navbar-height));
+  background: var(--inverted-bg-color);
+  width: var(--sidebar-width);
+  transition: 0.2s width;
+  position: relative;
+}
+
+.collapsed {
+  width: var(--sidebar-width-collapsed);
+}
+
+.switchers {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+}

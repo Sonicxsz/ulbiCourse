@@ -1,0 +1,11 @@
+.wrapper {
+  cursor: pointer;
+  padding: 4px;
+}
+
+.clear {
+  outline: none;
+  border: none;
+  background: unset;
+  color: var(--inverted-primary-color);
+}
