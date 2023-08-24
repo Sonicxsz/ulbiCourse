@@ -1,23 +1,35 @@
-import { Link, LinkProps } from "react-router-dom"
-import cn from "classnames"
-import css from "./appLink.module.scss"
+import { classNames } from 'shared/lib/classNames/classNames';
+import { Link, LinkProps } from 'react-router-dom';
+import { FC } from 'react';
+import cls from './AppLink.module.scss';
 
 export enum AppLinkTheme {
-    LIGHT = "light",
-    DARK = "dark"
+    PRIMARY = 'primary',
+    SECONDARY = 'secondary',
+    RED = 'red',
 }
 
-interface AppLinkProps extends LinkProps{
-    classname?: string,
-    theme?: AppLinkTheme
+interface AppLinkProps extends LinkProps {
+    className?: string;
+    theme?: AppLinkTheme;
 }
 
-function AppLink ({children, to, classname, theme = AppLinkTheme.LIGHT, ...rest}:AppLinkProps) {
-  return (
-    <Link to={to} className={cn(css.wrapper, css[theme], classname)} {...rest}>
-      {children}
-    </Link>
-  )
-}
+export const AppLink: FC<AppLinkProps> = (props) => {
+    const {
+        to,
+        className,
+        children,
+        theme = AppLinkTheme.PRIMARY,
+        ...otherProps
+    } = props;
 
-export default AppLink
+    return (
+        <Link
+            to={to}
+            className={classNames(cls.AppLink, { [cls[theme]]: true }, [className])}
+            {...otherProps}
+        >
+            {children}
+        </Link>
+    );
+};

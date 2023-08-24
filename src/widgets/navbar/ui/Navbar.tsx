@@ -1,18 +1,25 @@
-import cn from "classnames"
-import css from "./navbar.module.scss"
-import AppLink from "shared/ui/AppLink/AppLink"
+import { classNames } from 'shared/lib/classNames/classNames';
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
+import { useTranslation } from 'react-i18next';
+import cls from './Navbar.module.scss';
 
-
-
-export function Navbar() {
-
-
-  return (
-    <div className={cn(css.wrapper)}>
-      <div className={css.links}>
-        <AppLink classname={css.marginRight} to={"/"}>main</AppLink>
-        <AppLink to={"/about"}>about</AppLink>
-      </div>
-    </div>
-  )
+interface NavbarProps {
+    className?: string;
 }
+
+export const Navbar = ({ className }: NavbarProps) => {
+    const { t } = useTranslation();
+
+    return (
+        <div className={classNames(cls.Navbar, {}, [className])}>
+            <div className={cls.links}>
+                <AppLink theme={AppLinkTheme.SECONDARY} to="/" className={cls.mainLink}>
+                    {t('Главная')}
+                </AppLink>
+                <AppLink theme={AppLinkTheme.RED} to="/about">
+                    {t('О сайте')}
+                </AppLink>
+            </div>
+        </div>
+    );
+};

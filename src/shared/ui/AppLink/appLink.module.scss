@@ -1,14 +1,15 @@
-.wrapper {
-  font: var(--font-m);
-  text-decoration: none;
-}
-.wrapper:hover {
-  text-decoration: underline;
-}
-.light {
-  color: var(--inverted-primary-color);
+.AppLink {
+    color: var(--primary-color);
 }
 
-.dark {
-  color: var(--inverted-primary-color);
+.primary {
+    color: var(--primary-color);
+}
+
+.secondary {
+    color: var(--inverted-primary-color);
+}
+
+.red {
+    color: red;
 }
