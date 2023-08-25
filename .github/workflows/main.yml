@@ -2,7 +2,7 @@ name: app
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
-  check-bats-version:
+  pipeline: 
     runs-on: ubuntu-latest
     strategy:
       matrix: 
@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: ${{matrix.node-version}}
-      - run: npm install
+      - run: npm ci
       - name: build prod
         run: npm run build:prod
       - name: linting typescript
