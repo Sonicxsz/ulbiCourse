@@ -5,9 +5,10 @@ import { Button, ThemeButton } from "shared/ui/Button/Button"
 import css from "./langSwitcher.module.scss"
 interface LangSwitcherProps {
     className?: string;
+    collapsed?: boolean;
 }
 
-export const LangSwitcher = ({ className }: LangSwitcherProps) => {
+export const LangSwitcher = ({ className, collapsed }: LangSwitcherProps) => {
   const { t, i18n } = useTranslation()
 
   const toggle = async () => {
@@ -20,7 +21,7 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
       theme={ThemeButton.CLEAR}
       onClick={toggle}
     >
-      {t("Язык")}
+      {collapsed ? t("lang short") : t("Язык")}
     </Button>
   )
 }
