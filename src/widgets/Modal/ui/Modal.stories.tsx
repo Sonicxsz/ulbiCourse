@@ -1,25 +1,27 @@
-import React from "react"
 import { ComponentMeta, ComponentStory } from "@storybook/react"
+
+import { Modal } from "./Modal"
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator"
 import { Theme } from "app/providers/ThemeProvider"
-import { Loader } from "./Loader"
 
 export default {
-  title: "shared/Loader",
-  component: Loader,
+  title: "widget/Modal",
+  component: Modal,
   argTypes: {
     backgroundColor: { control: "color" },
   },
-  args: {
-    to: "/",
-  },
-} as ComponentMeta<typeof Loader>
+} as ComponentMeta<typeof Modal>
 
-const Template: ComponentStory<typeof Loader> = (args) => <Loader {...args} />
+const Template: ComponentStory<typeof Modal> = (args) => <Modal isVisible {...args}>This is the Modal </Modal>
 
-export const Normal = Template.bind({})
-Normal.args = {}
+export const Light = Template.bind({})
+Light.args = {}
 
 export const Dark = Template.bind({})
+
 Dark.args = {}
 Dark.decorators = [ThemeDecorator(Theme.DARK)]
+
+
+
+

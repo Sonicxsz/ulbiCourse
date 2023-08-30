@@ -1,5 +1,5 @@
 import cn from "classnames"
-import "./Loader.scss"
+import "./loader.scss"
 
 interface LoaderProps {
     className?: string;

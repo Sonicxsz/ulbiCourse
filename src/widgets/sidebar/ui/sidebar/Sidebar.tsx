@@ -3,7 +3,7 @@ import { useState } from "react"
 import { ThemeSwitcher } from "shared/ui/ThemeSwitcher"
 import { LangSwitcher } from "shared/ui/LangSwitcher/LangSwitcher"
 import { Button, ThemeButton } from "shared/ui/Button/Button"
-import css from "./Sidebar.module.scss"
+import css from "./sidebar.module.scss"
 import { useTranslation } from "react-i18next"
 import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink"
 import HomeIcon from "shared/assets/icons/home.svg"
@@ -15,10 +15,13 @@ interface SidebarProps {
 
 export const Sidebar = ({ className }: SidebarProps) => {
   const [collapsed, setCollapsed] = useState(false)
+
   const {t} = useTranslation()
   const onToggle = () => {
     setCollapsed((prev) => !prev)
   }
+
+  
 
   return (
     <div
@@ -51,6 +54,8 @@ export const Sidebar = ({ className }: SidebarProps) => {
         <ThemeSwitcher />
         <LangSwitcher className={css.lang} collapsed={collapsed} />
       </div>
+
+
     </div>
   )
 }

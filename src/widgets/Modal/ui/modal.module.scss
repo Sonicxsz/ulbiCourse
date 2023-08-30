@@ -1,0 +1,33 @@
+.wrapper{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #0000009c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.content{
+    padding: 20px;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    max-width: 40%;
+    transition: 0.2s transform ease-in-out;
+    transform: scale(0.6);
+
+}
+
+
+.visible{
+    z-index: var(--modal-index);
+    transform: scale(1);
+}
+
+.closing {
+    transform: scale(0.6);
+}
+
