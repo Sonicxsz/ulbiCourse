@@ -13,12 +13,12 @@
 
 .content{
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--inverted-bg-color);
     border-radius: var(--border-radius);
     max-width: 40%;
     transition: 0.2s transform ease-in-out;
     transform: scale(0.6);
-
+    color: var(--inverted-primary-color)
 }
 
 
