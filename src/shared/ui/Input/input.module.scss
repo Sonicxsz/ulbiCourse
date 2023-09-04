@@ -1,0 +1,30 @@
+.wrapper{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.input {
+    padding: 5px 10px;
+    border: unset;
+    outline-color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    margin-left: auto;
+}
+
+
+.black_input {
+    background-color: #5a5a5a6e;
+
+}
+
+.normal_input {
+    background-color: #c6e7f149;
+  
+}
+
+.normal_input:focus{
+    background-color: #ffffff;
+
+}

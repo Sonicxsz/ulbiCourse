@@ -1,2 +1,2 @@
 export {StoreProvider} from "./ui/StoreProvider"
-export {createReduxStore} from "./config/configStore"
+export {createReduxStore, useAppDispatch} from "./config/configStore"

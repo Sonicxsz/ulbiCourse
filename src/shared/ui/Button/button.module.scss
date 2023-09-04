@@ -1,6 +1,8 @@
 .Button {
   cursor: pointer;
   color: var(--primary-color);
+  transition: all var(--hover-animation-delay) linear;
+
 }
 
 .clear {
@@ -14,7 +16,13 @@
   padding: 10px 15px;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
-  background: none;
+  background: #ffffff00;
+}
+
+.outline:hover{
+  background: #051dfa23;
+  border: 1px solid var(--primary-light-color);
+  color: var(--primary-light-color);
 }
 
 
@@ -30,3 +38,14 @@
   color: var(--inverted-primary-color);
   background: none;
 }
+
+.outlineInverted:hover{
+  background: #051dfa23;
+  border: 1px solid var(--inverted-primary-light-color);
+  color: var(--inverted-primary-light-color);
+}
+
+.disabled {
+  opacity: 0.5;
+}
+

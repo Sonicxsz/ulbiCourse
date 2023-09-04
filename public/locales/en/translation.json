@@ -11,5 +11,12 @@
   "Главная": "Main",
   "О сайте": "About us",
   "Toggle": "Toggle",
-  "lang short": "EN"
+  "lang short": "EN",
+  "login": "login",
+  "password": "Enter your password",
+  "username": "Enter your username",
+  "logout": "Do you really want to logout?",
+  "yes": "yes",
+  "no": "no"
+
 }

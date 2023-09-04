@@ -1,17 +1,18 @@
 import cn from "classnames"
 import { ButtonHTMLAttributes, FC } from "react"
-import cls from "./button.module.scss"
+import css from "./button.module.scss"
 
 export enum ThemeButton {
     CLEAR = "clear",
     OUTLINE = "outline",
     PRIMARY = "primary",
-    OUTLINE_INVERTED = "outlineInverted"
+    OUTLINE_INVERTED = "outlineInverted",
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     className?: string;
     theme?: ThemeButton;
+    disabled?: boolean,
 }
 
 export const Button: FC<ButtonProps> = (props) => {
@@ -19,13 +20,16 @@ export const Button: FC<ButtonProps> = (props) => {
     className,
     children,
     theme,
+    disabled,
     ...otherProps
   } = props
 
   return (
     <button
       type="button"
-      className={cn(cls.Button, [cls[theme]], [className])}
+      className={cn(css.Button, [css[theme]], [className], {
+        [css.disabled]: disabled
+      })}
       {...otherProps}
     >
       {children}

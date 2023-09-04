@@ -8,6 +8,7 @@ interface StoreProps {
   children: ReactNode,
   initialState?: DeepPartial<StateSchema>,
 }
+
 export const StoreProvider = ({children, initialState}: StoreProps) => {
 
   return (

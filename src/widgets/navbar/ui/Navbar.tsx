@@ -1,30 +1,28 @@
 import cn from "classnames"
-import cls from "./navbar.module.scss"
-import { Modal } from "widgets/Modal"
+import css from "./navbar.module.scss"
 import { Button, ThemeButton } from "shared/ui/Button/Button"
-import { useCallback, useState } from "react"
+import { useNavbar } from "./useNavbar"
+import { LogoutModal } from "widgets/LogoutModal"
 
 interface NavbarProps {
     className?: string;
 }
 
 export const Navbar = ({ className }: NavbarProps) => {
-  const [showModal, setShowModal] = useState(false)
-  const closeModal = useCallback(() => {
-    setShowModal(false)
-  }, [])
 
-  const openModal = useCallback(() => {
-    setShowModal(true)
-  },[])
+
+  const {logoutModalProps} = useNavbar()
+
+  
   return (
-    <div className={cn(cls.Navbar, [className])}>
-      <Button onClick={openModal} theme={ThemeButton.OUTLINE_INVERTED}>
-        OPEN MODAL
-      </Button>
+    <>
+      <div className={cn(css.Navbar, [className])}>
+        <Button onClick={logoutModalProps.openLogoutModal} className={css.loginBtn} theme={ThemeButton.OUTLINE_INVERTED}>
+          Logout
+        </Button>      
+      </div>
 
-      <Modal closeModal={closeModal} isVisible={showModal}>Hello Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non reprehenderit perspiciatis earum quidem iste, magni dolore ipsum animi quo reiciendis ex esse in quis, quasi exercitationem culpa tempora adipisci labore.</Modal>
-      
-    </div>
+      <LogoutModal isVisible={logoutModalProps.logoutModal} closeModal={logoutModalProps.closeLogoutModal}/>
+    </>
   )
 }

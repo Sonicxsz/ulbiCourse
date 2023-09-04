@@ -1,7 +1,13 @@
 {
   "Toggle": "",
   "lang short": "",
+  "login": "login",
+  "logout": "logout",
+  "no": "no",
+  "password": "password",
   "throw error": "throw error",
+  "username": "username",
+  "yes": "yes",
   "Главная": "Главная",
   "Главная страница": "Главная страница",
   "О сайте": "О сайте",
