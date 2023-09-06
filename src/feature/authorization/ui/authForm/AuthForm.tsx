@@ -15,9 +15,8 @@ export function AuthForm() {
     handleClickSendBtn
   } = useAuthForm()
 
-
   return (
-    <div className={cn(css.wrapper, loading && css.wrapperLoading)}>
+    <div className={cn(css.wrapper)}>
       <Input placeholder={t("username")}
         value={username}
         onChange={handleChangeUserName}
@@ -38,3 +37,5 @@ export function AuthForm() {
     </div>
   )
 }
+
+export default AuthForm

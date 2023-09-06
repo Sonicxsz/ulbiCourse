@@ -6,7 +6,7 @@ import { USER_DATA_FROM_LOCAL } from "shared/constants/AuthUser"
     
 
 
-const LOGIN_URL = "http://localhost:8000/login"
+const LOGIN_URL = "http://192.168.0.103:8000/login"
 
 interface loginByUserNameProps {
   username: string,
