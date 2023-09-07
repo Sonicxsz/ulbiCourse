@@ -17,6 +17,6 @@ export enum TypographyVariant {
 
 export function Typography({children, variant}:TypographyProps) {
   return (
-    <p className={cn(css.wrapper, css[variant])}>{children}</p>
+    <p data-testid="Typography" className={cn(css.wrapper, css[variant])}>{children}</p>
   )
 }

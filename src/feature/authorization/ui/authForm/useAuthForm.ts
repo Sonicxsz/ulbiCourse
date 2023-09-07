@@ -1,25 +1,19 @@
 import { useSelector } from "react-redux"
 import { getLoginData } from "../../model/selectors/getLoginData/getLoginData"
-import { useCallback, useEffect } from "react"
+import { useCallback} from "react"
 import { loginActions, loginReducer } from "feature/authorization/model/slice/loginSlice"
 import { loginByUserName } from "feature/authorization/model/services/loginByUserName/loginByUserName"
 import { useAppDispatch } from "app/providers/StoreProvider"
-import { useStore } from "react-redux"
-import { ReduxStoreWithManager } from "app/providers/StoreProvider/config/stateSchema"
+import { useAsyncReducer } from "shared/hooks/useAyncReducer"
+
 
 
 export const useAuthForm = () => {
-  const store = useStore() as ReduxStoreWithManager
-  
+
   const dispatch = useAppDispatch()
-
-  useEffect(() => {
-    store.reducerManager.add("login", loginReducer)
-
-    dispatch({type: "@init login form"})
-
-  }, [])
-
+  useAsyncReducer([
+    {key: "login", reducer: loginReducer}
+  ])
   const {loading,
     password, 
     username} = useSelector(getLoginData)
@@ -34,6 +28,8 @@ export const useAuthForm = () => {
   }, [dispatch])
 
   const handleClickSendBtn = useCallback(() => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     dispatch(loginByUserName({username: username, password: password}))
   }, [dispatch, password, username])
 

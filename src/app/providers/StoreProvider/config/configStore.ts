@@ -40,9 +40,6 @@ export const createReduxStore= (
 }
 
 
-// const store = createReduxStore()
-// type AppDispatch = typeof store.dispatch
-// type DispatchFunc = () => AppDispatch
 
 export const useAppDispatch = useDispatch
 

@@ -1,12 +1,12 @@
 import { createAsyncThunk } from "@reduxjs/toolkit"
-import axios from "axios"
 import { User, userActions } from "entities/User"
 import { USER_DATA_FROM_LOCAL } from "shared/constants/AuthUser"
+import axios from "axios"
 
     
 
 
-const LOGIN_URL = "http://192.168.0.103:8000/login"
+const LOGIN_URL = "http://localhost:8000/login"
 
 interface loginByUserNameProps {
   username: string,
@@ -19,7 +19,7 @@ export const loginByUserName = createAsyncThunk<User, loginByUserNameProps>(
     try{
       const response = await axios.post<User>(LOGIN_URL, data)
 
-      if(!response.data){
+      if(!response.data ){
         throw new Error("Cannot get User Data")
       }
 

@@ -1,1 +1,4 @@
-export {AuthPage} from "./ui/AuthPage"
+
+import { lazy } from "react"
+
+export const AsyncAuthPage = lazy(() => import("./ui/AuthPage"))

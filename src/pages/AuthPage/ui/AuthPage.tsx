@@ -3,7 +3,7 @@ import { Suspense } from "react"
 import css from "./AuthPage.module.scss"
 import { AuthForm } from "feature/authorization"
 
-export function AuthPage() {
+function AuthPage() {
 
 
   return (
@@ -18,3 +18,5 @@ export function AuthPage() {
     </Suspense>
   )
 }
+
+export default AuthPage

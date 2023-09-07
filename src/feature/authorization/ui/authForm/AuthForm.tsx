@@ -5,6 +5,8 @@ import css from "./AuthForm.module.scss"
 import { useAuthForm } from "./useAuthForm"
 import { Loader } from "shared/ui/Loader/Loader"
 import cn from "classnames"
+
+
 export function AuthForm() {
   const {t} = useTranslation()
   const { username, 
@@ -38,4 +40,3 @@ export function AuthForm() {
   )
 }
 
-export default AuthForm
