@@ -14,7 +14,6 @@ interface UseAsyncReducerProps {
 export const useAsyncReducer = (asynReducers:UseAsyncReducerProps[]) => {
   const store = useStore() as ReduxStoreWithManager
   const dispatch = useAppDispatch()
-  
   useEffect(() => {
     asynReducers.forEach(i => {
       store.reducerManager.add(i.key, i.reducer)

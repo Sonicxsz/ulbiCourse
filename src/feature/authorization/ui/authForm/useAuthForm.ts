@@ -9,7 +9,6 @@ import { useAsyncReducer } from "shared/hooks/useAyncReducer"
 
 
 export const useAuthForm = () => {
-
   const dispatch = useAppDispatch()
   useAsyncReducer([
     {key: "login", reducer: loginReducer}

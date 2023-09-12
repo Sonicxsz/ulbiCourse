@@ -1,0 +1,31 @@
+.collapsed {
+ 
+    
+            span {
+              opacity: 0;
+              transition: 0.2s opacity linear;
+              width: 0;
+            }
+        
+ 
+  
+}
+
+.linkWrapper {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    height: 40px;
+    align-items: center;
+    width: 100%;
+    transition: 0.2s linear background-color;
+  }
+  
+  .linkWrapper:hover {
+    background-color: #f8b1e3b7;
+  }
+
+  .icon {
+    fill: var(--inverted-primary-color);
+  }
+  

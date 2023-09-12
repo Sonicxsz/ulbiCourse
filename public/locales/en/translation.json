@@ -17,6 +17,6 @@
   "username": "Enter your username",
   "logout": "Do you really want to logout?",
   "yes": "yes",
-  "no": "no"
-
+  "no": "no",
+  "profile": "Profile"
 }

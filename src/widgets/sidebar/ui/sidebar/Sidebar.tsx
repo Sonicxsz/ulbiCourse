@@ -5,10 +5,10 @@ import { LangSwitcher } from "shared/ui/LangSwitcher/LangSwitcher"
 import { Button, ThemeButton } from "shared/ui/Button/Button"
 import css from "./sidebar.module.scss"
 import { useTranslation } from "react-i18next"
-import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink"
-import HomeIcon from "shared/assets/icons/home.svg"
-import AboutIcon from "shared/assets/icons/about.svg"
-import { RoutePath } from "shared/config/routeConfig/routeConfig"
+
+import ItemSidebar from "../ItemSidebar/ItemSidebar"
+import { sideBarItems } from "./constants"
+
 interface SidebarProps {
     className?: string;
 }
@@ -29,18 +29,11 @@ export const Sidebar = ({ className }: SidebarProps) => {
       className={cn(css.Sidebar, {[css.collapsed]: collapsed }, [className])}
     >
       <div className={css.links}>
-        <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.main} className={css.linkWrapper}>
-          <HomeIcon className={css.icon}/>
-          <span>
-            {t("Главная")}
-          </span>
-        </AppLink>
-        <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.about} className={css.linkWrapper}>
-          <AboutIcon className={css.icon}/>
-          <span >
-            {t("О сайте")}
-          </span>
-        </AppLink>
+        {sideBarItems.map((i, ind) => {
+          return <ItemSidebar collapsed={collapsed} key={ind} path={i.path} title={i.title} Icon={i.Icon} />
+        })}
+       
+     
       </div>
       <Button
         data-testid="sidebar-toggle"
