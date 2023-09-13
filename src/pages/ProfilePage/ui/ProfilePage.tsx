@@ -1,12 +1,9 @@
 import { Profile } from "entities/profile"
-import { Suspense } from "react"
 
 function ProfilePage() {
   return (
-    <Suspense fallback='...'>
-      <Profile />
+    <Profile />
 
-    </Suspense>
   )
 }
 

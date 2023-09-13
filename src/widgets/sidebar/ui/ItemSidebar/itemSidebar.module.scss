@@ -1,14 +1,9 @@
 .collapsed {
- 
-    
-            span {
-              opacity: 0;
-              transition: 0.2s opacity linear;
-              width: 0;
-            }
-        
- 
-  
+  span {
+    opacity: 0;
+    transition: 0.2s opacity linear;
+    width: 0;
+  }
 }
 
 .linkWrapper {

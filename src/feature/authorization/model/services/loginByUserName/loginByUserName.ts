@@ -1,12 +1,12 @@
 import { createAsyncThunk } from "@reduxjs/toolkit"
 import { User, userActions } from "entities/User"
 import { USER_DATA_FROM_LOCAL } from "shared/constants/AuthUser"
-import axios from "axios"
+import { $api } from "shared/api/api"
 
     
 
 
-const LOGIN_URL = "http://localhost:8000/login"
+const LOGIN_URL = "/login"
 
 interface loginByUserNameProps {
   username: string,
@@ -17,7 +17,7 @@ export const loginByUserName = createAsyncThunk<User, loginByUserNameProps>(
   "login/loginByUserName",
   async (data, thunkAPI) => {
     try{
-      const response = await axios.post<User>(LOGIN_URL, data)
+      const response = await $api.post<User>(LOGIN_URL, data)
 
       if(!response.data ){
         throw new Error("Cannot get User Data")
@@ -29,7 +29,7 @@ export const loginByUserName = createAsyncThunk<User, loginByUserNameProps>(
       return response.data
 
     }catch(e){
-      thunkAPI.rejectWithValue("error")
+      return thunkAPI.rejectWithValue("error")
     }
   }
 )

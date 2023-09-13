@@ -11,6 +11,7 @@ describe("selector Login", () => {
         password: "123",
         username: "12",
         loading: false,
+        error: ""
       }
 
     }

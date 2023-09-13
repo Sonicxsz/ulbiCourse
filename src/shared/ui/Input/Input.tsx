@@ -16,14 +16,16 @@ export interface InputProps extends BaseInputProps{
     className?: string,
     onChange?: (val:string) => void,
     placeholder?: string,
-    theme?: InputTheme
+    theme?: InputTheme,
+    value?: string | number
 }
 
 export function Input({
   className,
   onChange,
   placeholder,
-  theme = InputTheme.BLACK
+  theme = InputTheme.BLACK,
+  value
 }:InputProps) {
 
 
@@ -34,7 +36,7 @@ export function Input({
   return (
     <div className={css.wrapper}>
       {placeholder && <span>{placeholder}</span>}
-      <input type="text" className={cn(css.input, className, css[theme])} onChange={handleChangeInput}/>
+      <input value={value} type="text" className={cn(css.input, className, css[theme])} onChange={handleChangeInput}/>
     </div>
   )
     

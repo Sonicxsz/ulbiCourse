@@ -13,7 +13,7 @@ export interface ProfileType {
 
 
 export interface ProfileSchema {
-    profile: ProfileType,
-    isLoading: boolean,
+    profile?: ProfileType,
+    loading: boolean,
     error: string,
 }

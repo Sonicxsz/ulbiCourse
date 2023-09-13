@@ -15,7 +15,7 @@ interface optionsProps {
 export function renderComponent(component: ReactNode, options?:optionsProps) {
   
   return render(
-    <StoreProvider initialState={options.initialState}>
+    <StoreProvider initialState={options?.initialState}>
       <MemoryRouter basename="/">
         <I18nextProvider i18n={i18nForTests}>
           {component}

@@ -1,4 +1,4 @@
-import { configureStore } from "@reduxjs/toolkit"
+import { CombinedState, configureStore, getDefaultMiddleware, Reducer } from "@reduxjs/toolkit"
 import { ReduxStoreWithManager, StateSchema } from "./stateSchema"
 import { counterReducer } from "entities/counter/model/slice/CounterSlice"
 import { useDispatch } from "react-redux"
@@ -25,9 +25,10 @@ export const createReduxStore= (
   const reduceManager = createReducerManager(rootReducers)
 
   const store = configureStore({
-    reducer: reduceManager.reduce,
+    reducer: reduceManager.reduce as Reducer<CombinedState<StateSchema>>,
     devTools: __IS_DEV__,
-    preloadedState: initialState
+    preloadedState: initialState,
+
   })
   
 
@@ -41,10 +42,9 @@ export const createReduxStore= (
 
 
 
-type useAppDispatch = ReturnType<typeof createReduxStore>
-
-export const useAppDispatch:() => useAppDispatch["dispatch"] = useDispatch
+type AppDispatch = ReturnType<typeof createReduxStore>["dispatch"];
 
 
+export const useAppDispatch = () => useDispatch<AppDispatch>()
 
 

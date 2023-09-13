@@ -1,5 +1,6 @@
 {
   "Toggle": "Toggle",
+  "edit profile": "edit profile",
   "lang short": "lang short",
   "login": "login",
   "logout": "logout",
@@ -8,6 +9,9 @@
   "throw error": "throw error",
   "username": "username",
   "yes": "yes",
+  "your age": "your age",
+  "your lastname": "your lastname",
+  "your name": "your name",
   "Главная": "Главная",
   "Главная страница": "Главная страница",
   "О сайте": "О сайте",
