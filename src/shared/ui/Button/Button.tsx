@@ -7,6 +7,7 @@ export enum ThemeButton {
     OUTLINE = "outline",
     PRIMARY = "primary",
     OUTLINE_INVERTED = "outlineInverted",
+    WARNING = "warning"
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
@@ -27,6 +28,7 @@ export const Button: FC<ButtonProps> = (props) => {
   return (
     <button
       type="button"
+      disabled={disabled}
       className={cn(css.Button, [css[theme]], [className], {
         [css.disabled]: disabled
       })}

@@ -8,6 +8,7 @@ import { Navbar } from "widgets/navbar"
 import { Sidebar } from "widgets/sidebar"
 import { useCheckLoginUser } from "../shared/hooks/useCheckLoginUser"
 import AuthPage from "pages/AuthPage/ui/AuthPage"
+import NoticeContainer from "entities/notice/ui/NoticeContainer"
 
 function App() {
   const { theme } = useTheme()
@@ -29,6 +30,7 @@ function App() {
         <div className="content-page">
           <Sidebar />
           <AppRouter />
+          <NoticeContainer/>
         </div>
       </div>
     </Suspense>

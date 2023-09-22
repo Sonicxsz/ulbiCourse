@@ -1,0 +1,25 @@
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select {
+    padding: 5px 10px;
+    background-color: unset;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    outline: 3px var(--primary-color);
+  
+
+}
+
+.option{
+    padding: 10px;
+    color: var(--inverted-primary-color);
+    background-color: var(--inverted-bg-color);
+}
+
+.readonly{
+    opacity: 0.6;
+}

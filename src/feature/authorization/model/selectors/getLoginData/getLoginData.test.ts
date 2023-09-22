@@ -16,6 +16,7 @@ describe("selector Login", () => {
 
     }
     expect(getLoginData(initialState as StateSchema)).toEqual({
+      error: "",
       password: "123",
       username: "12",
       loading: false,

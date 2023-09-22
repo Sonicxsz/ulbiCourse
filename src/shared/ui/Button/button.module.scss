@@ -40,12 +40,19 @@
 }
 
 .outlineInverted:hover{
-  background: #051dfa23;
+  background: #77885c23;
   border: 1px solid var(--inverted-primary-light-color);
   color: var(--inverted-primary-light-color);
 }
 
 .disabled {
   opacity: 0.5;
+}
+
+.warning {
+  padding: 10px 15px;
+  border: 1px solid var(--warning-color);
+  color: var(--warning-color);
+  background: #ffffff00;
 }
 

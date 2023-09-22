@@ -15,5 +15,6 @@ export interface ProfileType {
 export interface ProfileSchema {
     profile?: ProfileType,
     loading: boolean,
-    error: string,
+    error: string[],
+    editable: boolean,
 }

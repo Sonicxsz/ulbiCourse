@@ -2,5 +2,14 @@
     "edit profile": "Edit profile",
     "your name": "Your name",
     "your lastname": "Your lastname",
-    "your age": "Your age"
+    "your age": "Your age",
+    "cancel": "Сancel",
+    "country": "Сountry",
+    "save": "Save changes",
+    "your city": "Your city",
+    "currency": "Currency",
+    "not correct user data": "fill all required fields",
+    "server error": "Somethink went wrong, please try later",
+    "this age is not allowed": "This age not allowed",
+    "Cannot get profile try later": "cannot get profile try later"
 }

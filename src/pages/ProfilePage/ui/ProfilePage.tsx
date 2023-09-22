@@ -1,8 +1,11 @@
 import { Profile } from "entities/profile"
-
+import css from "./ProfilePage.module.scss"
 function ProfilePage() {
   return (
-    <Profile />
+    <div className={css.wrapper}>
+      <Profile />
+    </div>
+ 
 
   )
 }

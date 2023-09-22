@@ -22,7 +22,7 @@ export const getProfile = createAsyncThunk<ProfileType, void, {rejectValue: stri
       return response.data
 
     }catch(e){
-      return thunkAPI.rejectWithValue("error")
+      return thunkAPI.rejectWithValue("cannot get profile try later")
     }
   }
 )

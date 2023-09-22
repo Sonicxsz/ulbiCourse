@@ -1,5 +1,8 @@
 {
   "Toggle": "",
+  "cancel": "cancel",
+  "country": "country",
+  "currency": "currency",
   "edit profile": "edit profile",
   "lang short": "",
   "login": "login",
@@ -10,6 +13,7 @@
   "username": "username",
   "yes": "yes",
   "your age": "your age",
+  "your city": "your city",
   "your lastname": "your lastname",
   "your name": "your name",
   "Главная": "Главная",

@@ -2,5 +2,14 @@
     "edit profile": "Редактировать профиль",
     "your name": "Ваше имя",
     "your lastname": "Ваша фамилия",
-    "your age": "Ваш возраст"
+    "your age": "Ваш возраст",
+    "cancel": "Отменить",
+    "country": "Страна",
+    "save": "Сохранить изменения",
+    "your city": "Ваш город",
+    "currency": "Валюта",
+    "not correct user data": "Заполните все обязательные поля",
+    "server error": "Что-то пошло не так, попробуйте позже",
+    "this age is not allowed": "Недопустимый возраст",
+    "cannot get profile try later": "Не удалось загрузить профиль, попробуйте позже"
 }

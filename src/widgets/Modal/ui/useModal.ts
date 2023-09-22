@@ -17,6 +17,7 @@ export const useModal = ({closeModal, isVisible}: props) => {
   
   
   const onEscape = (e: KeyboardEvent) => {
+    console.log("1")
     if(e.key === "Escape"){
       closeModalWithAnim()
     }
@@ -27,6 +28,7 @@ export const useModal = ({closeModal, isVisible}: props) => {
   }
   
   useEffect(() => {
+    console.log("2")
     window.addEventListener("keydown", onEscape)    
   
       
@@ -43,11 +45,14 @@ export const useModal = ({closeModal, isVisible}: props) => {
     if(timer.current) {
       clearTimeout(timer.current)
     }
+    if(closing){
+      timer.current = setTimeout(() => {
+        console.log("3")
+        closeModal()
+        setClosing(false)
+      }, ANIMATION_DELAY)
+    }
    
-    timer.current = setTimeout(() => {
-      closeModal()
-      setClosing(false)
-    }, ANIMATION_DELAY)
   
   }, [closing])
 

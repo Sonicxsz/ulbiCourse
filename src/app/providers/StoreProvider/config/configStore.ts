@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux"
 import { userReducer } from "entities/User"
 import {ReducersMapObject} from "@reduxjs/toolkit"
 import { createReducerManager } from "./reduxManager"
+import { noticeReducer } from "entities/notice"
 
 
 
@@ -19,6 +20,7 @@ export const createReduxStore= (
     ...asyncReducers,
     counter: counterReducer,
     user: userReducer,
+    notice: noticeReducer
   }
 
 
@@ -39,6 +41,8 @@ export const createReduxStore= (
   return store as ReduxStoreWithManager
   
 }
+
+
 
 
 
